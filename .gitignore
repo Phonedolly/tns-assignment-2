@@ -1,6 +1,8 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+var_exp_data.json
+t_exp_data.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
