@@ -14,13 +14,13 @@ if __name__ == '__main__':
         sample_variance[i] = sample[i].var(ddof=1)
 
     ''' 데이터를 json으로 출력 '''
-    data = {'samples': sample, 'means': sample_mean, 'vars': sample_variance}
+    data = {'sample': sample, 'sample mean': sample_mean, 'sample variance': sample_variance}
     with open('var_exp_data.json', 'w', encoding='utf-8') as file:
         json.dump(data, file, indent='\t', cls=tools.NumpyEncoder)
 
     ''' 히스토그램 출력 '''
     plt.hist(sample_variance, rwidth=0.9, color='xkcd:hot pink')
-    plt.title("Histogram of Variances")
+    plt.title("Histogram of Sample Variances")
     plt.xlabel("classes")
     plt.ylabel("num of variances in each class")
     plt.show()

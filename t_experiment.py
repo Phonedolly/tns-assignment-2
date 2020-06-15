@@ -19,7 +19,7 @@ if __name__ == '__main__':
         t_statistic[i] = np.sqrt(const.NUM_OF_SAMPLES) * (sample_mean[i] - const.MEAN) / sample_variance[i]
 
     ''' 데이터를 json으로 출력 '''
-    data = {'samples': sample, 'means': sample_mean, 'vars': sample_variance, 't-stats': t_statistic}
+    data = {'sample': sample, 'sample mean': sample_mean, 'sample variance': sample_variance, 't-stats': t_statistic}
     with open('t_exp_data.json', 'w', encoding='utf-8') as file:
         json.dump(data, file, indent='\t', cls=tools.NumpyEncoder)
 
